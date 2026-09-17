@@ -1,0 +1,211 @@
+---
+import '../styles/global.css';
+
+const steps = [
+  'REGISTRATION & PATIENT FILE',
+  'CONSULTATION & Clinical Examination',
+  'CASTING & Measurements',
+  'FABRICATION of device',
+  'First Fitting',
+  'Gait Training',
+  'FINAL CHECKOUT & FOLLOW UP',
+];
+
+const navItems = [
+  'Home',
+  'About Us',
+  'Patients We Serve',
+  'Our Products',
+  'Patient Protocol',
+  'Contact Us',
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mozambique Rehabilitation and Diagnostic Center provides prosthetic and orthotic solutions to restore mobility and dignity."
+    />
+    <title>MRDC Mozambique</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark" aria-label="MRDC logo">
+            <span class="brand-orbit"></span>
+            <span class="brand-core"></span>
+            <span class="brand-strap"></span>
+          </div>
+
+          <div class="brand-text-wrap">
+            <div class="brand-text-line">
+              <span>MOZAM</span>
+              <span class="brand-accent">B</span>
+              <span>QUE</span>
+            </div>
+            <div class="brand-subtitle">Rehabilitation and Diagnostic Center</div>
+          </div>
+        </div>
+
+        <button class="menu-button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <main class="page-body">
+        <section class="hero-panel">
+          <div class="hero-visual"></div>
+        </section>
+
+        <section class="section-green">
+          <div class="section-green-inner">
+            <h2>Ready-Made Items</h2>
+            <div class="pill-arrow">→</div>
+          </div>
+        </section>
+
+        <section class="product-grid">
+          <article class="product-card">
+            <div class="product-art art-one"></div>
+          </article>
+          <article class="product-card">
+            <div class="product-art art-two"></div>
+          </article>
+        </section>
+
+        <section class="section-green">
+          <div class="section-green-inner">
+            <h2>Special silicon solutions</h2>
+            <div class="pill-arrow">→</div>
+          </div>
+        </section>
+
+        <section class="single-product-wrap">
+          <article class="product-card large">
+            <div class="product-art art-three"></div>
+          </article>
+        </section>
+
+        <section class="section-green">
+          <div class="section-green-inner">
+            <h2>Special Medical Shoes</h2>
+            <div class="pill-arrow">→</div>
+          </div>
+        </section>
+
+        <div class="content-area">
+          <div class="copy-block">
+            <p>
+              We are a specialized Physical Rehabilitation center in Maputo Mozambique,
+              dedicated to transforming lives through innovative prosthetics and orthotics
+              (Artificial Limbs & Supports). Our team combines medical expertise,
+              engineering excellence, and compassionate care to restore mobility,
+              functionality, and confidence for every patient we serve.
+            </p>
+            <p>
+              At MRDC, we care for people of all ages who face challenges with mobility or
+              physical function. Our patients include children, adults, and older adults.
+            </p>
+          </div>
+
+          <div class="protocol-box">
+            <p>
+              The following guidelines are designed to help patients understand the typical
+              steps involved in receiving prosthetic and orthotic rehabilitation services at MRDC.
+            </p>
+          </div>
+
+          <div class="steps-list">
+            {steps.map((step, index) => (
+              <div class="step-item">
+                <span class="step-number">Step {index + 1}</span>
+                <span class="step-copy">{step}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="contact-note">
+            Your health and satisfaction are our priority. If you have any questions about our
+            services, appointments, or facilities, feel free to contact us — we’ll be glad to
+            guide you every step of the way.
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-emoji">📍</span>
+              <div>
+                <h3>Physical Address</h3>
+                <p>
+                  Av. Rua São Paulo, Nº 607<br />
+                  Bairro 25 de Junho, KaMubukwana<br />
+                  Maputo Cidade, Mozambique
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-emoji">✉️</span>
+              <div>
+                <h3>Email</h3>
+                <p>Recepcao@mrdc.co.mz</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-emoji">📞</span>
+              <div>
+                <h3>Phone</h3>
+                <p>+258 870 904 451</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">MR</div>
+            <span>MRDC</span>
+          </div>
+
+          <div class="socials" aria-label="Social media links">
+            <span>f</span>
+            <span>◎</span>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <a href="#">{item}</a>
+          ))}
+        </nav>
+
+        <div class="footer-contact">
+          <div><span>📍</span> Av. Rua São Paulo, Nº 607 Bairro 25 de Junho, KaMubukwana Maputo Cidade, Mozambique</div>
+          <div><span>✉️</span> Recepcao@mrdc.co.mz</div>
+          <div><span>📞</span> +258 870 904 451</div>
+        </div>
+
+        <div class="footer-meta">
+          <a href="#">Cookies</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+
+      <div class="cookie-banner">
+        <p>We use cookies to ensure that we give you the best experience on our website.</p>
+        <div class="cookie-actions">
+          <button class="accept-btn">Accept</button>
+          <button class="chat-btn" aria-label="Chat">💬</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
